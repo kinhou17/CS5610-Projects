@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Mini Assignment 3</title>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-auto-rows: 1fr;
+                grid-gap: 5px;
+                height: 100vh;
+                grid-template-areas: 
+                    "header header header header header header"
+                    "left main main main main right"
+                    "left main main main main right"
+                    "left main main main main right"
+                    "left main main main main right"
+                    "footer footer footer footer footer footer";
+            }
+            .box-header {
+                grid-area: header;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background-color: orange;
+                border-width:2px;
+                border-color:purple;
+                border-style:solid
+            }
+            .box-left {
+                grid-area: left;
+                background-color: orange;
+                border-width:2px;
+                border-color:purple;
+                border-style:solid
+            }
+            .box-main {
+                grid-area: main;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background-color: orange;
+                border-width:2px;
+                border-color:purple;
+                border-style:solid
+            }
+            .box-right {
+                grid-area: right;
+                background-color: orange;
+                border-width:2px;
+                border-color:purple;
+                border-style:solid
+            }
+            .box-footer {
+                grid-area: footer;
+                background-color: orange;
+                border-width:2px;
+                border-color:purple;
+                border-style:solid
+            }
+            .center-square {
+                background-color: fuchsia;
+                transition: .5s;
+                width: 60px;
+                height: 60px;
+            }
+            .center-square:hover {
+                transform: scale(2);
+                background-color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <div class="box-header">
+                <h1>Colin Nordquist</h1>
+            </div>
+            <div class="box-left"></div>
+            <div class="box-main">
+                <div class="center-square"></div>
+            </div>
+            <div class="box-right"></div>
+            <div class="box-footer"></div>
+        </div>
+    </body>
+
+</html>
