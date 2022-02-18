@@ -1,7 +1,9 @@
 /* Add your styles here */
 body {
     background: #f2f2f2;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*-------------------*/
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -9,20 +11,23 @@ a {
     background-color: transparent;
     text-decoration: none;
 }
-  
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+.nav-bar-element {
+    display: inline-block;
+    margin-right: 5vw;
+    margin-left: 5vw;
 }
-  
+/*
 li {
     display: inline-block;
     margin-right: 5vw;
     margin-left: 5vw;
 }
+*/
 
 .nav-bar {
+    margin: 0;
+    padding: 0;
     position: sticky;
     font-size: 2vw;
     justify-content: center;
@@ -49,23 +54,38 @@ li {
 
 .grid-container {
     display: grid;
-    background-color: #f2f2f2;
+    /*background-color: #f2f2f2;*/ 
     grid-template-areas: 
-        'header header header header header header'
-        'box box main main main main'
-        'box box footer footer footer footer';
+        'header'
+        'main'
+        'footer';
 }
+
+.grid-container::before {
+    content: "";
+    background-image: url("../background-image.jpeg");
+    background-position: center;
+    background-size: cover;
+    opacity: .66;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
 .box {
-    background-color: #c8d8e4;
-    border: 1px solid black;
+    /*background-color: #c8d8e4;*/
+    /*border: 1px solid black;*/
 
 }
 .box-header {
     grid-area: header; 
-    display:flex;
+    position: sticky;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
+    height: 5vh;
     background-color: #52ab98;
 }
 .box-menu {
@@ -76,27 +96,41 @@ li {
 }
 .box-main { 
     grid-area: main;
-    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    height: 53vh;
 }
-.box-footer { 
+.box-content { 
+    display: flex;
     grid-area: footer;
-    height: 90vh;
+    height: 42vh;
+}
+
+.box-introduction {
+    flex: 3;
+}
+
+.box-education {
+    flex: 1;
+}
+
+.name-title {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Monaco";
+    flex: 1;
+    vertical-align: middle;
 }
 
 .circle {
+    flex: 5;
     position: relative;
     border-radius: 100%;
-    width: 80%;
     aspect-ratio: 1 / 1;
     background: white;
     margin: auto;
-    margin-top: 40vh;
     background-image: url('../self-photo.jpeg');
     background-position: center;
     background-size: cover;
-}
-
-.img {
-    scale: .2;
-    object-fit: scale-down;
+    margin-bottom: 1%;
 }
