@@ -52,8 +52,8 @@ li {
     background-color: #f2f2f2;
     grid-template-areas: 
         'header header header header header header'
-        'box main main main main main'
-        'box footer footer footer footer footer';
+        'box box main main main main'
+        'box box footer footer footer footer';
 }
 .box {
     background-color: #c8d8e4;
@@ -71,6 +71,8 @@ li {
 .box-menu {
     grid-area: box;
     height: 180vh;
+    align-items: center;
+    /*background-image: url('../self-photo.jpeg');*/
 }
 .box-main { 
     grid-area: main;
@@ -79,4 +81,22 @@ li {
 .box-footer { 
     grid-area: footer;
     height: 90vh;
+}
+
+.circle {
+    position: relative;
+    border-radius: 100%;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    margin: auto;
+    margin-top: 40vh;
+    background-image: url('../self-photo.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.img {
+    scale: .2;
+    object-fit: scale-down;
 }
