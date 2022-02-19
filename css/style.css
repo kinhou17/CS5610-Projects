@@ -12,6 +12,7 @@ body {
     grid-template-areas: 
         'header'
         'main-page';
+    overflow-x: hidden;
 }
 
 /* ------------------------------ NAV BAR ------------------------------ */
@@ -60,7 +61,7 @@ body {
         'photo'
         'about-me';
     }
-  }
+}
 
 .photo {
     padding: 5%;

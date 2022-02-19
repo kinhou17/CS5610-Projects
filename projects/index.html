@@ -7,40 +7,46 @@
     <meta name="viewport" content="width=device-width">
     <title>Projects</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="projects-style.css">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="box nav-bar">
+
+        <div class="nav-bar">
             <nav>
                 <ul>
-                    <li>
-                        <a href="../">Home</a>
-                    </li>
-                    <li class="nav-active">
-                        <a href="">Projects</a>
-                    </li> 
-                    <li>
-                        <a href="../contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="../aboutMe">About Me</a>
-                    </li>
+                    <li><a href="..">Colin Nordquist</a></li>
+                    <li><a class="current-page" href="">Projects</a></li>
+                    <li><a href="../contact">Contact</a></li>
+                    <li><a href="../aboutMe">My Hobbies</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="box box-menu">THIS IS THE MENU AREA</div>
-        <div class="box box-main">YO THESE ARE MY PROJECTS</div>
-        <div class="box box-footer">Footer</div>
+        
+        <div class="main-page">
+            <h2>Discord Trivia Bot</h2>
+            <ul>
+                <li>Developed a Trivia Bot in Java that allows users to play trivia in a Discord server with their friends.</li>
+                <li>Designed and implemented the bot in a team of six students, sourcing trivia questions from the Open Trivia Database API.</li>
+                <li>Implemented back-end features including Discord integration and designing a database to record the scores of all players who use the bot, which can be viewed on a player leader board.</li>
+                <li>Designed many front-end features related to trivia session behavior, including question timers, result charts, and options for users to specify trivia question categories and difficulties.</li>
+            </ul>
+            <br/>
+
+            <h2>CookEasy</h2>
+            <ul>
+                <li>Developed a website using MySQL and Java that allows novice cooks to find better recipes, using an ingredient search engine to search for recipes from food.com that contain a specific ingredient.</li>
+                <li>Worked as part of a team of students to process the database sourced from kaggle.com and developed the website framework in MySQL Workbench.</li>
+                <li>Developed key insights into the database by cross-referencing with other databases using SQL joins within ETL workflows in CloverDX.</li>
+                <li>Implemented website using Java and Apache Tomcat, and demonstrated its functionality to my Database Management Systems class peers and professor.</li>
+            </ul>
+            <br/>
+
+            <h2>Interactive Othello Game</h2>
+            <ul>
+                <li>Developed a python-based 8x8 grid game following the rules of Othello using Processing graphical library where the user plays against a computer player.</li>
+                <li>Designed the game to keep score, assess win conditions, and have the computer player make the most optimal move every turn that flips the most opposing player tiles possible.</li>
+            </ul>
+        </div>
     </div>
-    <h1>Home</h1>
-
-    <p>
-        Move some files around and try to update the navigation to still work!
-    </p>
-    <p>
-        <em>(hint: you'll need to update the CSS link href as well)</em>
-    </p>
-</body>
-
-</html>
