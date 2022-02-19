@@ -1,133 +1,103 @@
 /* Add your styles here */
+
 body {
-    background: #f2f2f2;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /*-------------------*/
-    padding: 0;
+    background-color: #F7ECDE;
     margin: 0;
 }
 
-a {
-    color: #2b6777;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-.sticky-class {
-    position: sticky;
-    top: 0;
-}
-
-.nav-bar-element {
-    display: inline-block;
-    margin-right: 5vw;
-    margin-left: 5vw;
-}
-/*
-li {
-    display: inline-block;
-    margin-right: 5vw;
-    margin-left: 5vw;
-}
-*/
-
-.nav-bar {
-    margin: 0;
-    padding: 0;
-    position: sticky;
-    font-size: 2vw;
-    justify-content: center;
-    margin: auto;
-}
-
-.nav-active {
-    background-color: coral;
-}
-/*
-.nav-link {
-    color: green;
-}
-
-.nav-item>a:hover {
-    color: green;
-}
-
-.nav-bar>.active>a {
-    background-color: #C0C0C0;
-    color: black;
-}
-*/
-
+/* define grid */
 .grid-container {
     display: grid;
     /*background-color: #f2f2f2;*/ 
     grid-template-areas: 
-        'header header header header header'
-        'main main main main edu'
-        'main main main main edu'
-        'main main main main edu'
-        'main main main main edu'
-        'content content content content edu';
+        'header'
+        'main-page';
 }
 
-.grid-container::before {
-    content: "";
-    background-image: url("../background-image.jpeg");
-    background-position: center;
-    background-size: cover;
-    opacity: .66;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-}
-
-.box {
-    /*background-color: #c8d8e4;*/
-    /*border: 1px solid black;*/
-
-}
-.box-header {
+/* ------------------------------ NAV BAR ------------------------------ */
+.nav-bar {
     grid-area: header; 
+
+    height: 5vh;
+    width:100%;
+
+    top: 0;
     position: sticky;
     display: flex;
+
+    font-size: 2vw;
+
     justify-content: center;
     align-items: center;
-    height: 5vh;
-    background-color: #52ab98;
+   
+    background-color: #54BAB9;
 }
 
-.box-main { 
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-}
-.box-content { 
-    height: 42vh;
+/*nav bar text*/
+.nav-bar a {
+    color: #F7ECDE;
+    text-decoration: none;
 }
 
-.box-education {
-    grid-area: edu;
+.nav-bar li {
+    display: inline-block;
+    margin-right: 5vw;
+    margin-left: 5vw;
 }
 
-.name-title {
-    text-align: center;
-    font-size: 40px;
-    font-family: "Monaco";
-    flex: 1;
-    vertical-align: middle;
+/* ------------------------------ MAIN PAGE ------------------------------ */
+.main-page {
+    grid-area: main-page;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
 }
 
-.circle {
-    flex: 5;
-    position: relative;
-    border-radius: 100%;
-    aspect-ratio: 1 / 1;
-    background: white;
-    margin: auto;
+@media (max-width: 600px) {
+    .main-page { 
+        grid-template-columns: none;
+        grid-template-areas: 
+        'photo'
+        'about-me';
+    }
+  }
+
+.photo {
+    padding: 5%;
+}
+
+#photo {
     background-image: url('../self-photo.jpeg');
     background-position: center;
-    background-size: cover;
-    margin-bottom: 1%;
+    background-size: contain;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
 }
+
+.about-me { 
+    padding: 0% 5%;
+    padding-bottom: 5%;
+}
+
+/* ------------------------------ EDUCATION ------------------------------ */
+.edu {
+    width: 100%;
+    grid-area: edu;
+    display: grid;
+    grid-template-areas: 
+        'title title'
+        'school school';
+    padding: 0% 5%;
+}
+
+.school {
+    grid-area: school;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+    .school { 
+        grid-template-columns: none;
+    }
+  }
