@@ -3,8 +3,8 @@
 body {
     background-color: #F7ECDE;
     margin: 0;
+    width: 100%;
 }
-
 /* define grid */
 .grid-container {
     display: grid;
@@ -12,7 +12,6 @@ body {
     grid-template-areas: 
         'header'
         'main-page';
-    overflow-x: hidden;
 }
 
 /* ------------------------------ NAV BAR ------------------------------ */
@@ -20,18 +19,22 @@ body {
     grid-area: header; 
 
     height: 5vh;
-    width:100%;
 
     top: 0;
     position: sticky;
     display: flex;
 
     font-size: 2vw;
-
+    text-align: center;
     justify-content: center;
     align-items: center;
+    width: 100vw;
    
     background-color: #54BAB9;
+}
+
+.nav-bar ul {
+    padding-inline-start: 0;
 }
 
 /*nav bar text*/
@@ -76,8 +79,13 @@ body {
 }
 
 .about-me { 
+    /*
     padding: 0% 5%;
-    padding-bottom: 5%;
+    padding-bottom: 5% --------------;
+    */
+    border: 5%;
+    width: 90%;
+    margin: auto;
 }
 
 /* ------------------------------ EDUCATION ------------------------------ */
@@ -88,7 +96,10 @@ body {
     grid-template-areas: 
         'title title'
         'school school';
-    padding: 0% 5%;
+    /*padding: 0% 5%; ---------------*/
+    border: 5%;
+    width: 90%;
+    margin: auto;
 }
 
 .school {
