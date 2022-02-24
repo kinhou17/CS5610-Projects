@@ -4,7 +4,37 @@
     width: 100%;
 }
 
-.contact-info-table {
-    text-align: left;
-    margin:auto;
+.image-area {
 }
+
+#self-photo {
+    background-image: url('colin-photo.jpeg');
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+    width: 100vw;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.contact-info-table {
+    table-layout:fixed;
+    word-break:break-word;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    td { 
+        display: block;
+        font-size: 3vh;
+    }
+}
+
+a { 
+    color: inherit; 
+} 

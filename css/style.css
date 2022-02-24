@@ -79,10 +79,6 @@ body {
 }
 
 .about-me { 
-    /*
-    padding: 0% 5%;
-    padding-bottom: 5% --------------;
-    */
     border: 5%;
     width: 90%;
     margin: auto;
@@ -91,12 +87,10 @@ body {
 /* ------------------------------ EDUCATION ------------------------------ */
 .edu {
     width: 100%;
-    grid-area: edu;
     display: grid;
     grid-template-areas: 
         'title title'
         'school school';
-    /*padding: 0% 5%; ---------------*/
     border: 5%;
     width: 90%;
     margin: auto;
