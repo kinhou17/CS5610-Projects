@@ -51,10 +51,12 @@ body {
     display: inline-block;
     margin-right: 5vw;
     margin-left: 5vw;
+    transition: ease-in .5s;
 }
 
 .nav-bar li:hover {
     background-color: grey;
+    transform: scale(1.1);
 }
 
 .current-page {
@@ -107,6 +109,11 @@ body {
     border: 5%;
     width: 90%;
     margin: auto;
+}
+
+.edu h2 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .school {
