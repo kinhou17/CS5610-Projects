@@ -25,7 +25,7 @@
     overflow-wrap: break-word;
 }
 
-.contact-info-table a:visited {
+.contact-info-table a:active {
     color: #54BAB9;
 }
 
