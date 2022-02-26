@@ -49,6 +49,10 @@ body {
     margin-left: 5vw;
 }
 
+.current-page {
+    text-decoration: underline;
+}
+
 /* ------------------------------ MAIN PAGE ------------------------------ */
 .main-page {
     grid-area: main-page;

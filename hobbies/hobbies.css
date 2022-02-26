@@ -1,0 +1,38 @@
+.main-page {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-areas: 
+        'hobbies'
+        'photos';
+}
+
+#hobbies {
+    display: grid;
+    grid-area: hobbies;
+    width: 100%;
+}
+
+#photo-display {
+    grid-area: photos;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+    #photo-display { 
+        grid-template-columns: none;
+    }
+  }
+
+#photo-display img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+/*img {
+    max-width:256px;
+    max-height:256px;
+    width:auto;
+    height:auto;
+    padding: 5px;
+}*/
