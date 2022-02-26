@@ -4,6 +4,7 @@ body {
     background-color: #F7ECDE;
     margin: 0;
     width: 100%;
+    font-family: sans-serif, "Times New Roman";
 }
 /* define grid */
 .grid-container {
@@ -17,20 +18,23 @@ body {
 /* ------------------------------ NAV BAR ------------------------------ */
 .nav-bar {
     grid-area: header; 
-
     height: 5vh;
-
     top: 0;
     position: sticky;
     display: flex;
-
     font-size: 2vw;
     text-align: center;
     justify-content: center;
     align-items: center;
     width: 100vw;
-   
     background-color: #54BAB9;
+}
+
+@media (max-width: 600px) {
+    .nav-bar { 
+        font-size: 2.6vw;
+        height: 40px;;
+    }
 }
 
 .nav-bar ul {
@@ -49,6 +53,10 @@ body {
     margin-left: 5vw;
 }
 
+.nav-bar li:hover {
+    background-color: grey;
+}
+
 .current-page {
     text-decoration: underline;
 }
@@ -59,6 +67,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 100%;
+    padding-top: 1vh;;
 }
 
 @media (max-width: 600px) {
@@ -110,4 +119,4 @@ body {
     .school { 
         grid-template-columns: none;
     }
-  }
+}
