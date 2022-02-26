@@ -1,6 +1,11 @@
-/* ------------------------------ FULL PAGE ---------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+/* ------------------------------ FULL PAGE ---------------------------- */
 body {
     background-color: #F7ECDE;
     margin: 0;
@@ -26,7 +31,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     background-color: #54BAB9;
 }
 
