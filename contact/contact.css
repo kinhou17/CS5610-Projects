@@ -16,8 +16,8 @@
 }
 
 .contact-info-table {
-    table-layout:fixed;
-    word-break:break-word;
+    table-layout: fixed;
+    word-break: break-word;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
@@ -30,12 +30,12 @@
 }
 
 @media (max-width: 600px) {
-    td { 
+    td {
         display: block;
         font-size: 3vh;
     }
 }
 
-a { 
-    color: inherit; 
-} 
+a {
+    color: inherit;
+}
